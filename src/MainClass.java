@@ -8,7 +8,7 @@ class MainClass {
         // SELECTION SORT
         System.out.println("SELECTION SORT");
         SelectionSort.sortArr(myArr);
-        printArr(myArr);
+        printArr(myArr, "Array Selection Sorted to: ");
         resetArr(myArr);
         System.out.println(" ");
 
@@ -21,7 +21,14 @@ class MainClass {
         // BUBBLE SORT
         System.out.println("BUBBLE SORT");
         BubbleSort.sortArr(myArr);
-        printArr(myArr);
+        printArr(myArr, "Array Bubble Sorted to: ");
+        resetArr(myArr);
+        System.out.println(" ");
+
+        // MERGE SORT
+        System.out.println("MERGE SORT");
+        myArr = MergeSort.sortArr(myArr);
+        printArr(myArr, "Array Merge Sorted to: ");
         resetArr(myArr);
         System.out.println(" ");
     }
@@ -41,8 +48,8 @@ class MainClass {
         System.out.println(" ");
     }
 
-    private static void printArr(int[] arr) {
-        System.out.print("Array sorted to: ");
+    private static void printArr(int[] arr, String desc) {
+        System.out.print(desc);
         for(int n: arr){
             System.out.print(n);
         }
